@@ -13,7 +13,8 @@ namespace MarketProject
         public int say;
         public int kod;
         public MehsulKateqoriya kateqoriya;
-
+        public int saat;
+        public int deqiqe;
     }
     enum MehsulKateqoriya
     {

@@ -103,14 +103,14 @@ namespace MarketProject
                 {
                     Console.WriteLine("Kodu daxil edin");
                     int i =int.Parse(Console.ReadLine());
-                    new Satish().SatishELave(i);
+                    satish1.SatishELave(i);
 
                 }
                 else if (satishdaxili == 2)
                 {
-                    Console.WriteLine("Mehsul Kodu daxil ele");
-                    int i = int.Parse(Console.ReadLine());
-                    satish1.SatishELave(i);
+                    //Console.WriteLine("Mehsul Kodu daxil ele");
+                    //int i = int.Parse(Console.ReadLine());
+                    //satish1.SatishELave(i);
 
                 }
                 else if (satishdaxili == 3)
@@ -134,7 +134,7 @@ namespace MarketProject
                 }
                 else if (satishdaxili == 7)
                 {
-
+                    satish1.TarixeGoreDateSatish();
 
                 }
                 else if (satishdaxili == 8)

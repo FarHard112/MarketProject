@@ -6,7 +6,6 @@ namespace MarketProject
 {
     class Mehsul:IMarketable
     {
-
         // 1 ci variantadi funksiyalar
         public void CreateMehsul()
         {
@@ -64,6 +63,10 @@ namespace MarketProject
                         break;
                     }
             }
+
+             yeniMehsul.saat = 0;
+             yeniMehsul.deqiqe = 0;
+
 
             Console.WriteLine("Mehsul Melumatlari daxil edilidi");
             Database.mehsuls.Add(yeniMehsul);
@@ -395,7 +398,7 @@ namespace MarketProject
 
         public void SatishELave(int n)
         {
-            Console.WriteLine(n);
+            
         }
 
         public void SatishReturn()
