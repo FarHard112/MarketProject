@@ -126,7 +126,7 @@ namespace MarketProject
                 else if (satishdaxili == 5)
                 {
 
-
+                    satish1.TarixeGoreAraligSatish();
                 }
                 else if (satishdaxili == 6)
                 {
