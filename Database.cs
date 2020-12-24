@@ -7,6 +7,9 @@ namespace MarketProject
     class Database
     {
         static public List<MehsulStructure> mehsuls = new List<MehsulStructure>();
+        static public List<Satish> satishes = new List<Satish>();
+
+       
         static public void addData()
         {
             MehsulStructure mehsul_1 = new MehsulStructure();
