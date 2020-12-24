@@ -15,18 +15,22 @@ namespace MarketProject
         {
 
             // Database.mehsuls.Add("Winston", 3.50f, 2, 1212, MehsulKateqoriya.Siqaret);
-            Database.addData();
+                Database.addData();
 
+             Console.WriteLine("1:Mehsul uzerind emeliyyat");
+             Console.WriteLine("2:Satish uzerinde emelliyyat");
+             Console.WriteLine("3:Cixis");
 
+             int mehsul1 =Convert.ToInt32(Console.ReadLine());
+            init(mehsul1);
 
-            Console.WriteLine("1:Mehsul uzerind emeliyyat");
-                Console.WriteLine("2:Satish uzerinde emelliyyat");
-                Console.WriteLine("3: Cixis");
-
-                int mehsul1 =Convert.ToInt32(Console.ReadLine());
-            //Mehsullar aid komandalar
-                if (mehsul1 == 1)
-                {
+            Console.ReadLine();
+           
+        }
+        static public void init(int mehsul1)
+        {
+            if (mehsul1 == 1)
+            {
                 #region Mehsullar uzerinde emeliyyatlar (Komandlar)
                 Console.WriteLine("1.Yeni mehsul elave et  ");
                 Console.WriteLine("2.Mehsul uzerinde duzelis et   ");
@@ -35,7 +39,7 @@ namespace MarketProject
                 Console.WriteLine("5.Categoriyasina gore mehsullari goster  ");
                 Console.WriteLine("6.Qiymet araligina gore mehsullari goster  ");
                 Console.WriteLine("7.Mehsullar arasinda ada gore axtaris et  ");
-              
+
                 int mehsuldaxili = Convert.ToInt32(Console.ReadLine());
                 if (mehsuldaxili == 1)
                 {
@@ -192,7 +196,7 @@ namespace MarketProject
 
 
             else if (mehsul1 == 2)
-                {
+            {
                 #region  SATISH KOMANDALAR
                 Console.WriteLine("1 Yeni satis elave etmek ");
                 Console.WriteLine("2 Satisdaki hansisa mehsulun geri qaytarilmasi( satisdan cixarilmasi");
@@ -202,14 +206,14 @@ namespace MarketProject
                 Console.WriteLine("6 Verilen mebleg araligina gore satislarin gosterilmesi - userden qebul edilen iki mebleg araligindaki satislarin gosterilmesi ");
                 Console.WriteLine("7 Verilmis bir tarixde olan satislarin gosterilmesi ");
                 Console.WriteLine("8 Verilmis nomreye esasen hemin nomreli satisin melumatlarinin gosterilmesi ");
-               int satishdaxili = Convert.ToInt32(Console.ReadLine());
+                int satishdaxili = Convert.ToInt32(Console.ReadLine());
 
-                if (satishdaxili==1)
+                if (satishdaxili == 1)
                 {
                     Console.WriteLine("Satish lari elave et ");
 
                 }
-                else if (satishdaxili==2)
+                else if (satishdaxili == 2)
                 {
                     Console.WriteLine("Satisdaki");
 
@@ -243,26 +247,23 @@ namespace MarketProject
 
 
                 }
-                
 
 
-                #endregion 
+
+                #endregion
             }
 
 
             else if (mehsul1 == 3)
-                {
+            {
                 //CIXIS 
-                    Console.WriteLine("Sistemden cixildi ");
-                    Console.Clear();
-                }
+                Console.WriteLine("Sistemden cixildi ");
+                Console.Clear();
+            }
 
 
 
-
-
-            Console.ReadLine();
-           
         }
     }
+    
 }
