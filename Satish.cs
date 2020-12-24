@@ -76,7 +76,7 @@ namespace MarketProject
             {
                 if (n == item.kod)
                 {
-<<<<<<< HEAD
+ 
                     Console.WriteLine("Elave olunan mehsul :" +"\n" +
                         "AD : " + item.ad + "\n" +
                                      "Qiymet :" + item.qiymet + "\n" +
@@ -84,7 +84,7 @@ namespace MarketProject
                                       "Kod :" + item.kod + "\n" +
                                       "Kateqoriya :" + item.kateqoriya + "\n"
                                    );;
-=======
+ 
 
                     Console.WriteLine("***Mehsul \n " +
                                      "AD : " + item.ad + "\n" +
@@ -113,7 +113,7 @@ namespace MarketProject
                     
                     item.saat = saat;
                     item.deqiqe = deqiqe;
->>>>>>> main
+ 
 
                     Database.satishes.Add(item);
                     Database.mehsuls.Remove(item);
@@ -330,6 +330,11 @@ namespace MarketProject
             Console.WriteLine("3:Cixis");
             Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
             Program.init(mehsul1);
+        }
+
+        int IMarketable.NomreyrEsasenSatishQaytarmaq()
+        {
+            throw new NotImplementedException();
         }
     }
 }
