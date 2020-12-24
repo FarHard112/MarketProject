@@ -6,7 +6,7 @@ namespace MarketProject
 {
     interface IMarketable
     {
-        public int  SatishELave();
+        public void  SatishELave(int n);
         public void SatishReturn();
         public void UmumiSatish();
         public void TarixeGoreAraligSatish();

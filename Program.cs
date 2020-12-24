@@ -206,7 +206,9 @@ namespace MarketProject
 
                 if (satishdaxili==1)
                 {
-                    Console.WriteLine("Satish lari elave et ");
+                    Console.WriteLine("Kodu daxil edin");
+                    int i =int.Parse(Console.ReadLine());
+                    new Satish().SatishELave(i);
 
                 }
                 else if (satishdaxili==2)

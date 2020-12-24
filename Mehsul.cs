@@ -76,6 +76,11 @@ namespace MarketProject
             throw new NotImplementedException();
         }
 
+        public void SatishELave(int n)
+        {
+            Console.WriteLine(n);
+        }
+
         public void SatishReturn()
         {
             throw new NotImplementedException();

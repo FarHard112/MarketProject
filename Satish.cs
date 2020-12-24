@@ -6,8 +6,19 @@ namespace MarketProject
 {
     class Satish:IMarketable  
     {
-       
 
+        public int nomre;
+        public int meblegi;
+        public string Satishtime;
+        List<MehsulStructure> SatishS = new List<MehsulStructure>();
+
+
+        enum SatishItem
+        {
+            Satishnomresi,
+            Satishsayi,
+            SatishMehsulu
+        }
         public int AdaEsasenSearch()
         {
             throw new NotImplementedException();
@@ -45,9 +56,12 @@ namespace MarketProject
             throw new NotImplementedException();
         }
 
-        public int SatishELave()
+        public void SatishELave(int n)
         {
-            throw new NotImplementedException();
+
+            Console.WriteLine(n);
+
+
              
         }
 
@@ -76,12 +90,15 @@ namespace MarketProject
             throw new NotImplementedException();
         }
 
-        enum SatishItem
-        {
-              Nomre,
-                Mehsul,
-                 Say
-        }
+      
+
+
+        // enum SatishItem
+        //  {
+        //     Nomre,
+        // /        Mehsul,
+        ///           Say
+        //  }
 
 
     }

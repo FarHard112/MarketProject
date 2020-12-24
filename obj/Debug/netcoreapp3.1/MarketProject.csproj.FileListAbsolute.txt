@@ -37,3 +37,16 @@ C:\Users\ress\Desktop\Market2\bin\Debug\netcoreapp3.1\MarketProject.runtimeconfi
 C:\Users\ress\Desktop\Market2\bin\Debug\netcoreapp3.1\MarketProject.dll
 C:\Users\ress\Desktop\Market2\bin\Debug\netcoreapp3.1\MarketProject.pdb
 C:\Users\ress\Desktop\Market2\obj\Debug\netcoreapp3.1\MarketProject.genruntimeconfig.cache
+C:\Users\USER\source\Uzi\market\obj\Debug\netcoreapp3.1\MarketProject.csprojAssemblyReference.cache
+C:\Users\USER\source\Uzi\market\obj\Debug\netcoreapp3.1\MarketProject.AssemblyInfoInputs.cache
+C:\Users\USER\source\Uzi\market\obj\Debug\netcoreapp3.1\MarketProject.AssemblyInfo.cs
+C:\Users\USER\source\Uzi\market\obj\Debug\netcoreapp3.1\MarketProject.csproj.CoreCompileInputs.cache
+C:\Users\USER\source\Uzi\market\obj\Debug\netcoreapp3.1\MarketProject.dll
+C:\Users\USER\source\Uzi\market\obj\Debug\netcoreapp3.1\MarketProject.pdb
+C:\Users\USER\source\Uzi\market\bin\Debug\netcoreapp3.1\MarketProject.exe
+C:\Users\USER\source\Uzi\market\bin\Debug\netcoreapp3.1\MarketProject.deps.json
+C:\Users\USER\source\Uzi\market\bin\Debug\netcoreapp3.1\MarketProject.runtimeconfig.json
+C:\Users\USER\source\Uzi\market\bin\Debug\netcoreapp3.1\MarketProject.runtimeconfig.dev.json
+C:\Users\USER\source\Uzi\market\bin\Debug\netcoreapp3.1\MarketProject.dll
+C:\Users\USER\source\Uzi\market\bin\Debug\netcoreapp3.1\MarketProject.pdb
+C:\Users\USER\source\Uzi\market\obj\Debug\netcoreapp3.1\MarketProject.genruntimeconfig.cache
