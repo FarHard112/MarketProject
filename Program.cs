@@ -11,9 +11,10 @@ namespace MarketProject
 {
     class Program 
     {
+     static  public  Satish satish1 = new Satish();
         static void Main(string[] args)
         {
-
+     
             // Database.mehsuls.Add("Winston", 3.50f, 2, 1212, MehsulKateqoriya.Siqaret);
                 Database.addData();
 
@@ -219,7 +220,9 @@ namespace MarketProject
                 }
                 else if (satishdaxili == 2)
                 {
-                    Console.WriteLine("Satisdaki");
+                    Console.WriteLine("Mehsul Kodu daxil ele");
+                    int i = int.Parse(Console.ReadLine());
+                    satish1.SatishELave(i);
 
                 }
                 else if (satishdaxili == 3)

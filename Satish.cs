@@ -7,7 +7,7 @@ namespace MarketProject
     class Satish:IMarketable  
     {
 
-<<<<<<< HEAD
+ 
         public int nomre;
         public int meblegi;
         public string Satishtime;
@@ -20,10 +20,10 @@ namespace MarketProject
             Satishsayi,
             SatishMehsulu
         }
-        public int AdaEsasenSearch()
-=======
+        
+ 
         public void AdaEsasenSearch()
->>>>>>> 37a3a1c1fef47404d3eadc161fc730cce49f8eea
+ 
         {
             throw new NotImplementedException();
         }
@@ -64,9 +64,36 @@ namespace MarketProject
         {
 
             Console.WriteLine(n);
+            foreach (var item in Database.mehsuls)
+            {
+                if (n==item.kod)
+                {
+                    Console.WriteLine("AD : " + item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                      "Say :" + item.say + "\n" +
+                                      "Kod :" + item.kod + "\n" +
+                                      "Kateqoriya :" + item.kateqoriya + "\n"
+                                    );
+
+                    Database.satishes.Add(item);
+                    Database.mehsuls.Remove(item);
+                    Console.WriteLine("Satishlar elave edildi");
+                    Console.WriteLine("1:Mehsul uzerind emeliyyat");
+                    Console.WriteLine("2:Satish uzerinde emelliyyat");
+                    Console.WriteLine("3:Cixis");
+                    int mehsul1 = Convert.ToInt32(Console.ReadLine());
+                    Program.init(mehsul1);
+                }
+                else
+                {
+                    Console.WriteLine("Bu adda mehsul tapilmadi ");
+                    break;
+                }
+            }
 
 
-             
+
+
         }
 
         public void SatishReturn()
