@@ -6,6 +6,7 @@ namespace MarketProject
 {
     class Database
     {
+        
         static public List<MehsulStructure> mehsuls = new List<MehsulStructure>();
         static public List<MehsulStructure> satishes = new List<MehsulStructure>();
 

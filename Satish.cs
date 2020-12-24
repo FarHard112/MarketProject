@@ -6,22 +6,6 @@ namespace MarketProject
 {
     class Satish:IMarketable  
     {
-
- 
-        public int nomre;
-        public int meblegi;
-        public string Satishtime;
-        List<MehsulStructure> SatishS = new List<MehsulStructure>();
-
-
-        enum SatishItem
-        {
-            Satishnomresi,
-            Satishsayi,
-            SatishMehsulu
-        }
-        
- 
         public void AdaEsasenSearch()
  
         {
@@ -35,7 +19,7 @@ namespace MarketProject
 
         }
 
-        public int KateqoriyaGoreQaytarish()
+        public void KateqoriyaGoreQaytarish()
         {
             throw new NotImplementedException();
         }
@@ -78,6 +62,7 @@ namespace MarketProject
                     Database.satishes.Add(item);
                     Database.mehsuls.Remove(item);
                     Console.WriteLine("Satishlar elave edildi");
+
                     Console.WriteLine("1:Mehsul uzerind emeliyyat");
                     Console.WriteLine("2:Satish uzerinde emelliyyat");
                     Console.WriteLine("3:Cixis");
@@ -116,21 +101,19 @@ namespace MarketProject
             throw new NotImplementedException();
         }
 
-        public int UpdateMeshul()
+        void IMarketable.UpdateMeshul()
         {
             throw new NotImplementedException();
         }
 
-      
+        public void DeleteMehsul()
+        {
+            throw new NotImplementedException();
+        }
 
-
-        // enum SatishItem
-        //  {
-        //     Nomre,
-        // /        Mehsul,
-        ///           Say
-        //  }
-
-
+        public void showMehsuls()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

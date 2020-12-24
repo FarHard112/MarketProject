@@ -14,10 +14,12 @@ namespace MarketProject
         public void MeblegAraliginaGoreMehsulQaytarilmasi();
         public int NomreyrEsasenSatishQaytarmaq();
         public void CreateMehsul();
-        public int UpdateMeshul();
-        public int KateqoriyaGoreQaytarish();
+        public void UpdateMeshul();
+        public void KateqoriyaGoreQaytarish();
         public int QiymetAraligaGoreMehsulQaytarishi();
         public void AdaEsasenSearch();
+        public void DeleteMehsul();
+        public void showMehsuls();
 
         
     }

@@ -1,9 +1,4 @@
-﻿ 
-// burda salam deyazi var
-
-
-
-using System;
+﻿using System;
 using System.IO; 
 using System.Collections.Generic;
 
@@ -11,19 +6,20 @@ namespace MarketProject
 {
     class Program 
     {
-     static  public  Satish satish1 = new Satish();
+        static public Mehsul mehsul = new Mehsul();
+        static public  Satish satish1 = new Satish();
         static void Main(string[] args)
         {
      
-            // Database.mehsuls.Add("Winston", 3.50f, 2, 1212, MehsulKateqoriya.Siqaret);
-                Database.addData();
+            //hazir datani elave elemek
+             Database.addData();
 
              Console.WriteLine("1:Mehsul uzerind emeliyyat");
              Console.WriteLine("2:Satish uzerinde emelliyyat");
              Console.WriteLine("3:Cixis");
 
-             int mehsul1 =Convert.ToInt32(Console.ReadLine());
-            init(mehsul1);
+                int mehsul1 =Convert.ToInt32(Console.ReadLine());
+                init(mehsul1);
 
             Console.ReadLine();
            
@@ -40,154 +36,48 @@ namespace MarketProject
                 Console.WriteLine("5.Categoriyasina gore mehsullari goster  ");
                 Console.WriteLine("6.Qiymet araligina gore mehsullari goster  ");
                 Console.WriteLine("7.Mehsullar arasinda ada gore axtaris et  ");
+                Console.WriteLine("0.Geri");
 
+                //secim
                 int mehsuldaxili = Convert.ToInt32(Console.ReadLine());
+
                 if (mehsuldaxili == 1)
                 {
-                    Mehsul mehsul = new Mehsul();
                     mehsul.CreateMehsul();
                 }
                 else if (mehsuldaxili == 2)
                 {
-                    Console.Write(" Duzelis etmek istediyiniz mehsulun Kodunu daxil edin :");
-                    int code = int.Parse(Console.ReadLine());
-                    for (int i = 0; i < Database.mehsuls.Count; i++)
-                    {
-                        if (Database.mehsuls[i].kod == code)
-                        {
-                            foreach (var item in Database.mehsuls)
-                            {
-                                Console.WriteLine("AD : " + item.ad + "\n" +
-                                     "Qiymet :" + item.qiymet + "\n" +
-                                      "Say :" + item.say + "\n" +
-                                      "Kod :" + item.kod + "\n" +
-                                      "Kateqoriya :" + item.kateqoriya + "\n"
-                                    );
-                            }
-
-                            Console.WriteLine("Duzelis edin:");
-
-                            Console.Write("AD : ");
-                            string ad = Console.ReadLine();
-                            Database.mehsuls[i].ad = ad;
-
-                            Console.Write("QİYMƏT : ");
-                            float qiymet = float.Parse(Console.ReadLine());
-                            Database.mehsuls[i].qiymet = qiymet;
-
-                            Console.Write("SAY : ");
-                            int say = int.Parse(Console.ReadLine());
-                            Database.mehsuls[i].say = say;
-
-                            Console.Write("KOD : ");
-                            int kod = int.Parse(Console.ReadLine());
-                            Database.mehsuls[i].kod = kod;
-
-                            Console.Write("KATEQORİYALAR \n\n");
-                            Console.WriteLine("Yuyucuvasite = 1 \nIckiler = 2\nSiqaret = 3\nSudMehsullari=4\nEtMehsullari=5");
-                            int kateqoriya = int.Parse(Console.ReadLine());
-
-                            switch (kateqoriya)
-                            {
-                                case 1:
-                                    {
-                                        Database.mehsuls[i].kateqoriya = MehsulKateqoriya.Yuyucuvasite;
-
-                                        break;
-                                    }
-                                case 2:
-                                    {
-                                        Database.mehsuls[i].kateqoriya = MehsulKateqoriya.Ickiler;
-
-                                        break;
-                                    }
-                                case 3:
-                                    {
-                                        Database.mehsuls[i].kateqoriya = MehsulKateqoriya.Siqaret;
-
-                                        break;
-                                    }
-                                case 4:
-                                    {
-                                        Database.mehsuls[i].kateqoriya = MehsulKateqoriya.SudMehsullari;
-
-                                        break;
-                                    }
-                                case 5:
-                                    {
-                                        Database.mehsuls[i].kateqoriya = MehsulKateqoriya.EtMehsullari;
-
-                                        break;
-                                    }
-                            }
-
-                            Console.WriteLine("DEYİŞİKLİKLƏR YADDAŞDA SAXLANILDI...\n\n");
-                            Console.WriteLine("MEHSUL\n");
-
-                            foreach (var item in Database.mehsuls)
-                            {
-                                Console.WriteLine("AD : " + item.ad + "\n" +
-                                     "Qiymet :" + item.qiymet + "\n" +
-                                      "Say :" + item.say + "\n" +
-                                      "Kod :" + item.kod + "\n" +
-                                      "Kateqoriya :" + item.kateqoriya + "\n"
-                                    );
-                            }
-
-                        }
-
-                    }
-
+                    mehsul.UpdateMeshul();
                 }
                 else if (mehsuldaxili == 3)
                 {
-                    Console.Write("Silmek istediyiniz mehsulun kodunu yazin :");
-                    int code = int.Parse(Console.ReadLine());
-                    for (int i = 0; i < Database.mehsuls.Count; i++)
-                    {
-                        if (Database.mehsuls[i].kod == code)
-                        {
-                            foreach (var item in Database.mehsuls)
-                            {
-                                Console.WriteLine("AD : " + item.ad + "\n" +
-                                     "Qiymet :" + item.qiymet + "\n" +
-                                      "Say :" + item.say + "\n" +
-                                      "Kod :" + item.kod + "\n" +
-                                      "Kateqoriya :" + item.kateqoriya + "\n"
-                                    );
-                            }
-
-                            Database.mehsuls.RemoveAt(i);
-                            Console.WriteLine("Mehsul SILINDI...\n\n");
-                        }
-                    }
+                    mehsul.DeleteMehsul();
                 }
                 else if (mehsuldaxili == 4)
                 {
-                    foreach (var item in Database.mehsuls)
-                    {
-                        Console.WriteLine("AD : " + item.ad + "\n" +
-                             "Qiymet :" + item.qiymet + "\n" +
-                              "Say :" + item.say + "\n" +
-                              "Kod :" + item.kod + "\n" +
-                              "Kateqoriya :" + item.kateqoriya + "\n"
-                            );
-
-                    }
+                    mehsul.showMehsuls();
                 }
                 else if (mehsuldaxili == 5)
                 {
-
+                    mehsul.KateqoriyaGoreQaytarish();
                 }
                 else if (mehsuldaxili == 6)
                 {
-                    Mehsul mehsul = new Mehsul();
                     mehsul.MeblegAraliginaGoreMehsulQaytarilmasi();
                 }
                 else if (mehsuldaxili == 7)
                 {
-                    Mehsul mehsul = new Mehsul();
                     mehsul.AdaEsasenSearch();
+                }
+                else if(mehsuldaxili == 0)
+                {
+                    Console.Clear();
+                    Console.WriteLine("1:Mehsul uzerind emeliyyat");
+                    Console.WriteLine("2:Satish uzerinde emelliyyat");
+                    Console.WriteLine("3:Cixis");
+
+                    int mehsul2 = Convert.ToInt32(Console.ReadLine());
+                    init(mehsul2);
                 }
                 else
                 {
@@ -196,8 +86,6 @@ namespace MarketProject
 
                 #endregion
             }
-
-
             else if (mehsul1 == 2)
             {
                 #region  SATISH KOMANDALAR
@@ -259,8 +147,6 @@ namespace MarketProject
 
                 #endregion
             }
-
-
             else if (mehsul1 == 3)
             {
                 //CIXIS 

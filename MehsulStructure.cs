@@ -4,15 +4,7 @@ using System.Text;
 
 namespace MarketProject
 {
-    enum MehsulKateqoriya
-    {
-        Yuyucuvasite,
-        Ickiler,
-        Siqaret,
-        SudMehsullari,
-        EtMehsullari
 
-    }
     [System.Serializable]
     class MehsulStructure 
     {
@@ -22,5 +14,14 @@ namespace MarketProject
         public int kod;
         public MehsulKateqoriya kateqoriya;
 
-       }
+    }
+    enum MehsulKateqoriya
+    {
+        Yuyucuvasite,
+        Ickiler,
+        Siqaret,
+        SudMehsullari,
+        EtMehsullari
+
+    }
 }
