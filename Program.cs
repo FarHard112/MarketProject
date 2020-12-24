@@ -130,8 +130,7 @@ namespace MarketProject
                 }
                 else if (satishdaxili == 6)
                 {
-
-
+                    satish1.MeblegeSatish();
                 }
                 else if (satishdaxili == 7)
                 {
@@ -140,7 +139,7 @@ namespace MarketProject
                 }
                 else if (satishdaxili == 8)
                 {
-
+                    satish1.MeblegeSatish();
 
                 }
 

@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "lAZXxLTGlTKsaqpCjg1YNmYlpFf9IQkzybgBj50lzz4EmnWF1d1E+AKYGKHaTfKOlWl6Qr/mzruAGm82fv2pvQ==",
+  "dgSpecHash": "tJJ2O5+yBVGxgT1D5gw8+/1bE6d9OspDSGZD0BXRknCbXjCyS6KRC8RQDGKh1DST8g7EQJPE+vsJvlr1dXnoog==",
   "success": true,
-  "projectFilePath": "C:\\Users\\ress\\Desktop\\Market2\\MarketProject.csproj",
-  "expectedPackageFiles": [],
+  "projectFilePath": "C:\\Users\\USER\\source\\Uzi\\market\\MarketProject.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.aspnetcore.app.ref\\3.1.10\\microsoft.aspnetcore.app.ref.3.1.10.nupkg.sha512",
+    "C:\\Users\\USER\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.10\\microsoft.netcore.app.host.win-x64.3.1.10.nupkg.sha512"
+  ],
   "logs": []
 }

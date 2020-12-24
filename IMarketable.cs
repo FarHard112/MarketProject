@@ -21,6 +21,7 @@ namespace MarketProject
         public void DeleteMehsul();
         public void showMehsuls();
         public void SatishDelete();
+        public void MeblegeSatish();
 
         
     }
