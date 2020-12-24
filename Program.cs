@@ -91,9 +91,9 @@ namespace MarketProject
                 #region  SATISH KOMANDALAR
                 Console.WriteLine("1 Yeni satis elave etmek ");
                 Console.WriteLine("2 Satisdaki hansisa mehsulun geri qaytarilmasi( satisdan cixarilmasi");
-                Console.WriteLine(" 3 Satisin silinmesi - satisin nomresine esasen silinmesi");
-                Console.WriteLine("4 Butun satislarin ekrana cixarilmasi (");
-                Console.WriteLine("- 5 Verilen tarix araligina gore satislarin gosterilmesi ");
+                Console.WriteLine("3 Satisin silinmesi - satisin nomresine esasen silinmesi");
+                Console.WriteLine("4 Butun satislarin ekrana cixarilmasi ");
+                Console.WriteLine("5 Verilen tarix araligina gore satislarin gosterilmesi ");
                 Console.WriteLine("6 Verilen mebleg araligina gore satislarin gosterilmesi - userden qebul edilen iki mebleg araligindaki satislarin gosterilmesi ");
                 Console.WriteLine("7 Verilmis bir tarixde olan satislarin gosterilmesi ");
                 Console.WriteLine("8 Verilmis nomreye esasen hemin nomreli satisin melumatlarinin gosterilmesi ");
@@ -139,7 +139,7 @@ namespace MarketProject
                 }
                 else if (satishdaxili == 8)
                 {
-                    satish1.MeblegeSatish();
+                    satish1.NomreyrEsasenSatishQaytarmaq();
 
                 }
 

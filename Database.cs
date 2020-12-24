@@ -15,7 +15,7 @@ namespace MarketProject
         {
             MehsulStructure mehsul_1 = new MehsulStructure();
 
-            Console.WriteLine("+");
+          
             mehsul_1.ad = "Winston";
             mehsul_1.qiymet = 3.50f;
             mehsul_1.say = 2;
