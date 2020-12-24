@@ -423,5 +423,10 @@ namespace MarketProject
         {
             throw new NotImplementedException();
         }
+
+        public void MeblegeSatish()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

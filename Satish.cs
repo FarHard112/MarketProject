@@ -34,9 +34,33 @@ namespace MarketProject
             throw new NotImplementedException();
         }
 
-        public int NomreyrEsasenSatishQaytarmaq()
+        public void  NomreyrEsasenSatishQaytarmaq()
         {
-            throw new NotImplementedException();
+
+            Console.WriteLine("Satish Kodunu daxil edin ");
+            int n = int.Parse(Console.ReadLine());
+            foreach (var item in Database.satishes)
+            {
+                if (n==item.kod)
+
+                {
+                    Console.WriteLine("Elave olunan mehsul :" + "\n" +
+                       "AD : " + item.ad + "\n" +
+                                    "Qiymet :" + item.qiymet + "\n" +
+                                     "Say :" + item.say + "\n" +
+                                     "Kod :" + item.kod + "\n" +
+                                     "Kateqoriya :" + item.kateqoriya + "\n"
+                                  ); ;
+
+                }
+                else
+                {
+                    Console.WriteLine("Bele satish bazada yoxdur");
+                }
+
+            }
+            
+            
         }
 
         public int QiymetAraligaGoreMehsulQaytarishi()
@@ -52,12 +76,13 @@ namespace MarketProject
             {
                 if (n == item.kod)
                 {
-                    Console.WriteLine("AD : " + item.ad + "\n" +
+                    Console.WriteLine("Elave olunan mehsul :" +"\n" +
+                        "AD : " + item.ad + "\n" +
                                      "Qiymet :" + item.qiymet + "\n" +
                                       "Say :" + item.say + "\n" +
                                       "Kod :" + item.kod + "\n" +
                                       "Kateqoriya :" + item.kateqoriya + "\n"
-                                    );
+                                   );;
 
                     Database.satishes.Add(item);
                     Database.mehsuls.Remove(item);
@@ -179,6 +204,49 @@ namespace MarketProject
                     Console.WriteLine("Satish tapilmadi");
                 }
             }
+        }
+
+        public void MeblegeSatish()
+        {
+
+            Console.WriteLine("Qiymetin araligi birinci(Neceden (Kicik Qiymet) ) qiymet ");
+            int i = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Qiymetin araligi ikinci(Neceye (Boyuk Qiymet)) qiymet ");
+            int j = Convert.ToInt32(Console.ReadLine());
+
+            foreach (var item in Database.satishes)
+            {
+
+                if (i < item.qiymet && item.qiymet < j)
+                {
+                    Console.WriteLine("*** SATISHLAR : "+ "\n"+
+                         item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                      "Say :" + item.say + "\n" +
+                                      "Kod :" + item.kod + "\n" +
+                                      "Kateqoriya :" + item.kateqoriya + "\n"
+                                    );
+                }
+                else
+                {
+                    Console.WriteLine("Bu qiymet araliginda mehsul tapilmadi ");
+                    break;
+                }
+            }
+
+            //geriye qayitmaq ucun
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Program.init(mehsul1);
         }
     }
 }
