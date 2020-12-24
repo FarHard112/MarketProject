@@ -52,12 +52,21 @@ namespace MarketProject
             {
                 if (n == item.kod)
                 {
-                    Console.WriteLine("AD : " + item.ad + "\n" +
+
+                    Console.WriteLine("***Mehsul \n " +
+                                     "AD : " + item.ad + "\n" +
                                      "Qiymet :" + item.qiymet + "\n" +
-                                      "Say :" + item.say + "\n" +
-                                      "Kod :" + item.kod + "\n" +
-                                      "Kateqoriya :" + item.kateqoriya + "\n"
+                                     "Say :" + item.say + "\n" +
+                                     "Kod :" + item.kod + "\n" +
+                                     "Kateqoriya :" + item.kateqoriya + "\n"
                                     );
+                    Console.Write("Tarixi daxil edin\nSaat:");
+                    int saat = int.Parse(Console.ReadLine());
+                    Console.Write("Deqiqe:");
+                    int deqiqe = int.Parse(Console.ReadLine());
+
+                    item.saat = saat;
+                    item.deqiqe = deqiqe;
 
                     Database.satishes.Add(item);
                     Database.mehsuls.Remove(item);
@@ -65,6 +74,8 @@ namespace MarketProject
                     Console.WriteLine("Satishlar elave edildi");
 
 
+
+                    //geriye donmek ucun
                     Console.WriteLine("1:Mehsul uzerind emeliyyat");
                     Console.WriteLine("2:Satish uzerinde emelliyyat");
                     Console.WriteLine("3:Cixis");
