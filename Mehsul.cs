@@ -8,9 +8,34 @@ namespace MarketProject
     {
       
 
-        public int AdaEsasenSearch()
+        public void AdaEsasenSearch()
         {
-            throw new NotImplementedException();
+            Console.WriteLine("Mehsulun adini daxil edin ");
+            string axtarisAd = Console.ReadLine();
+            
+
+            foreach (var item in Database.mehsuls)
+            {
+                if (axtarisAd.ToUpper()==item.ad.ToUpper())
+                {
+                    Console.WriteLine("AD : " + item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                      "Say :" + item.say + "\n" +
+                                      "Kod :" + item.kod + "\n" +
+                                      "Kateqoriya :" + item.kateqoriya + "\n"
+                                    );
+                }
+                else
+                {
+                    Console.WriteLine("Bu adda mehsul tapilmadi ");
+                    break;
+                }
+            }
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Program.init(mehsul1);
         }
 
         public void CreateMehsul()
@@ -21,17 +46,76 @@ namespace MarketProject
             yeniMehsul.ad = MehsulunAd;
 
             Console.WriteLine("Qiymeti daxil edin");
-            int MehsulQiymet = Convert.ToInt32(Console.ReadLine());
+            float MehsulQiymet = float.Parse(Console.ReadLine());
             yeniMehsul.qiymet = MehsulQiymet;
 
             Console.WriteLine("Mehsulun sayini daxil edin");
-            int MehsulSayi = Convert.ToInt32(Console.ReadLine());
-           
+            int MehsulSayi = int.Parse(Console.ReadLine());
+            yeniMehsul.say = MehsulSayi;
 
-            Console.WriteLine("Barkodu Elave Et");
-            int MehsulBarkod = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Barkodu elave edin");
+            int MehsulBarkod = int.Parse(Console.ReadLine());
+            yeniMehsul.kod = MehsulBarkod;
+
+            Console.WriteLine("Kateqoriya daxil edin");
+            Console.WriteLine("Yuyucuvasite = 1 \nIckiler = 2\nSiqaret = 3\nSudMehsullari=4\nEtMehsullari=5");
+            int kateqoriya = int.Parse(Console.ReadLine());
+
+            switch (kateqoriya)
+            {
+                case 1:
+                    {
+                        yeniMehsul.kateqoriya = MehsulKateqoriya.Yuyucuvasite;
+
+                        break;
+                    }
+                case 2:
+                    {
+                        yeniMehsul.kateqoriya = MehsulKateqoriya.Ickiler;
+
+                        break;
+                    }
+                case 3:
+                    {
+                        yeniMehsul.kateqoriya = MehsulKateqoriya.Siqaret;
+
+                        break;
+                    }
+                case 4:
+                    {
+                        yeniMehsul.kateqoriya = MehsulKateqoriya.SudMehsullari;
+
+                        break;
+                    }
+                case 5:
+                    {
+                        yeniMehsul.kateqoriya = MehsulKateqoriya.EtMehsullari;
+
+                        break;
+                    }
+            }
 
             Console.WriteLine("Mehsul Melumatlari daxil edilidi");
+            Database.mehsuls.Add(yeniMehsul);
+
+            Console.WriteLine("****Mehsul****");
+
+                Console.WriteLine("AD : " + yeniMehsul.ad + "\n" +
+                     "Qiymet :" + yeniMehsul.qiymet + "\n" +
+                      "Say :" + yeniMehsul.say + "\n" +
+                      "Kod :" + yeniMehsul.kod + "\n" +
+                      "Kateqoriya :" + yeniMehsul.kateqoriya + "\n"
+                    );
+
+            Console.WriteLine("************************");
+
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Program.init(mehsul1);
+
+
         }
 
         public int KateqoriyaGoreQaytarish()
@@ -41,16 +125,22 @@ namespace MarketProject
 
         public void MeblegAraliginaGoreMehsulQaytarilmasi()
         {
-            int qiymet = 30;
+            
             Console.WriteLine("Qiymetin araligi birinci(Neceden ) qiymet ");
             int i=Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("Qiymetin araligi ikinci(Neceye) qiymet ");
             int j= Convert.ToInt32(Console.ReadLine());
-            while (i<j)
+
+            foreach (var item in Database.mehsuls)
             {
-                if (i<qiymet||qiymet<j)
+                if (i < item.qiymet && item.qiymet < j)
                 {
-                    Console.WriteLine(qiymet);
+                    Console.WriteLine("AD : " + item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                      "Say :" + item.say + "\n" +
+                                      "Kod :" + item.kod + "\n" +
+                                      "Kateqoriya :" + item.kateqoriya + "\n"
+                                    );
                 }
                 else
                 {
@@ -58,6 +148,12 @@ namespace MarketProject
                     break;
                 }
             }
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Program.init(mehsul1);
+
 
         }
 

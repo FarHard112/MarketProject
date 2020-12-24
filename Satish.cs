@@ -7,6 +7,7 @@ namespace MarketProject
     class Satish:IMarketable  
     {
 
+<<<<<<< HEAD
         public int nomre;
         public int meblegi;
         public string Satishtime;
@@ -20,6 +21,9 @@ namespace MarketProject
             SatishMehsulu
         }
         public int AdaEsasenSearch()
+=======
+        public void AdaEsasenSearch()
+>>>>>>> 37a3a1c1fef47404d3eadc161fc730cce49f8eea
         {
             throw new NotImplementedException();
         }
