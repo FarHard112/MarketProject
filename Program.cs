@@ -1,6 +1,4 @@
 ﻿using System;
-using System.IO; 
-using System.Collections.Generic;
 
 namespace MarketProject
 {
@@ -108,10 +106,8 @@ namespace MarketProject
                 }
                 else if (satishdaxili == 2)
                 {
-                    //Console.WriteLine("Mehsul Kodu daxil ele");
-                    //int i = int.Parse(Console.ReadLine());
-                    //satish1.SatishELave(i);
-
+                    satish1.SatishQaytar();
+                    
                 }
                 else if (satishdaxili == 3)
                 {
@@ -149,9 +145,10 @@ namespace MarketProject
             }
             else if (mehsul1 == 3)
             {
-                //CIXIS 
-                Console.WriteLine("Sistemden cixildi ");
-                Console.Clear();
+
+                Environment.Exit(0);
+
+
             }
 
 
