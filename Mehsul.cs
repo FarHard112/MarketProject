@@ -303,6 +303,7 @@ namespace MarketProject
 
             foreach (var item in Database.mehsuls)
             {
+               
                 if (i < item.qiymet && item.qiymet < j)
                 {
                     Console.WriteLine("AD : " + item.ad + "\n" +
@@ -418,7 +419,9 @@ namespace MarketProject
             throw new NotImplementedException();
         }
 
-
-     
+        public void SatishDelete()
+        {
+            throw new NotImplementedException();
+        }
     }
 }

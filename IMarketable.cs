@@ -20,6 +20,7 @@ namespace MarketProject
         public void AdaEsasenSearch();
         public void DeleteMehsul();
         public void showMehsuls();
+        public void SatishDelete();
 
         
     }

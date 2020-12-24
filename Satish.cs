@@ -4,10 +4,10 @@ using System.Text;
 
 namespace MarketProject
 {
-    class Satish:IMarketable  
+    class Satish : IMarketable
     {
         public void AdaEsasenSearch()
- 
+
         {
             throw new NotImplementedException();
         }
@@ -47,10 +47,10 @@ namespace MarketProject
         public void SatishELave(int n)
         {
 
-            Console.WriteLine(n);
+           
             foreach (var item in Database.mehsuls)
             {
-                if (n==item.kod)
+                if (n == item.kod)
                 {
                     Console.WriteLine("AD : " + item.ad + "\n" +
                                      "Qiymet :" + item.qiymet + "\n" +
@@ -61,12 +61,21 @@ namespace MarketProject
 
                     Database.satishes.Add(item);
                     Database.mehsuls.Remove(item);
+                    
                     Console.WriteLine("Satishlar elave edildi");
+
 
                     Console.WriteLine("1:Mehsul uzerind emeliyyat");
                     Console.WriteLine("2:Satish uzerinde emelliyyat");
                     Console.WriteLine("3:Cixis");
                     int mehsul1 = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
+
+
+                    Console.WriteLine("1:Mehsul uzerind emeliyyat");
+                    Console.WriteLine("2:Satish uzerinde emelliyyat");
+                    Console.WriteLine("3:Cixis");
+                    Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
                     Program.init(mehsul1);
                 }
                 else
@@ -83,7 +92,31 @@ namespace MarketProject
 
         public void SatishReturn()
         {
-            throw new NotImplementedException();
+            foreach (var item in Database.satishes)
+            {
+                Console.WriteLine(
+                    "*** SATISHLAR" + "\n"+
+                    "AD : " + item.ad + "\n" +
+                     "Qiymet :" + item.qiymet + "\n" +
+                      "Say :" + item.say + "\n" +
+                      "Kod :" + item.kod + "\n" +
+                      "Kateqoriya :" + item.kateqoriya + "\n"
+                    );
+
+            }
+            //geriye qayitmaq ucun
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Program.init(mehsul1);
         }
 
         public void TarixeGoreAraligSatish()
@@ -114,6 +147,38 @@ namespace MarketProject
         public void showMehsuls()
         {
             throw new NotImplementedException();
+        }
+
+        public void SatishDelete()
+        {
+            Console.Write("Silmek istediyiniz mehsulun kodunu yazin :");
+            int code = int.Parse(Console.ReadLine());
+            for (int i = 0; i < Database.satishes.Count; i++)
+            {
+                if (Database.satishes[i].kod == code)
+                {
+                    Console.WriteLine(Database.satishes[i].ad + " satish silindi...\n\n");
+                    Database.satishes.RemoveAt(i);
+
+                    //geriye qayitmaq ucun
+                    Console.WriteLine("1:Mehsul uzerind emeliyyat");
+                    Console.WriteLine("2:Satish uzerinde emelliyyat");
+                    Console.WriteLine("3:Cixis");
+                    int mehsul1 = Convert.ToInt32(Console.ReadLine());
+                    Console.Clear();
+
+                    Console.WriteLine("1:Mehsul uzerind emeliyyat");
+                    Console.WriteLine("2:Satish uzerinde emelliyyat");
+                    Console.WriteLine("3:Cixis");
+                    Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
+
+                    Program.init(mehsul1);
+                }
+                else
+                {
+                    Console.WriteLine("Satish tapilmadi");
+                }
+            }
         }
     }
 }
