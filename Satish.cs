@@ -61,10 +61,23 @@ namespace MarketProject
                                      "Kateqoriya :" + item.kateqoriya + "\n"
                                     );
                     Console.Write("Tarixi daxil edin\nSaat:");
-                    int saat = int.Parse(Console.ReadLine());
-                    Console.Write("Deqiqe:");
-                    int deqiqe = int.Parse(Console.ReadLine());
+                    int saat;
+                    saat = int.Parse(Console.ReadLine());
+                    while (saat > 24)
+                    {
+                        Console.Write("Tarixi dogru daxil edin\nSaat:");
+                        saat = int.Parse(Console.ReadLine());
 
+                    }
+                    Console.Write(saat+":");
+                    int deqiqe;
+                    deqiqe = int.Parse(Console.ReadLine());
+                    while (deqiqe > 60)
+                    {
+                        Console.Write("Tarixi dogru daxil edin\nDeqiqe:");
+                        deqiqe = int.Parse(Console.ReadLine());
+                    }
+                    
                     item.saat = saat;
                     item.deqiqe = deqiqe;
 
@@ -132,12 +145,62 @@ namespace MarketProject
 
         public void TarixeGoreAraligSatish()
         {
-            throw new NotImplementedException();
         }
 
         public void TarixeGoreDateSatish()
         {
-            throw new NotImplementedException();
+            Console.Clear();
+            Console.Write("Tarixi daxil edin\nSaat:");
+            int saat;
+            saat = int.Parse(Console.ReadLine());
+            while (saat > 24)
+            {
+                Console.Write("Tarixi dogru daxil edin\nSaat:");
+                saat = int.Parse(Console.ReadLine());
+            }
+            Console.Write(saat + ":");
+
+            int deqiqe;
+            deqiqe = int.Parse(Console.ReadLine());
+
+            while (deqiqe > 60)
+            {
+                Console.Write("Tarixi dogru daxil edin\nDeqiqe:");
+                deqiqe = int.Parse(Console.ReadLine());
+            }
+
+            foreach (var item in Database.satishes)
+            {
+
+                if (saat == item.saat && deqiqe == item.deqiqe)
+                {
+
+                    Console.WriteLine(
+                        "*** SATISHLAR" + "\n" +
+                        "AD : " + item.ad + "\n" +
+                         "Qiymet :" + item.qiymet + "\n" +
+                          "Say :" + item.say + "\n" +
+                          "Kod :" + item.kod + "\n" +
+                          "Kateqoriya :" + item.kateqoriya + "\n" +
+                          "Tarix : " + item.saat + ":" + item.deqiqe + "\n"
+                        );
+
+                }
+
+            }
+            //geriye donmek ucun
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Program.init(mehsul1);
         }
 
         public void UmumiSatish()
