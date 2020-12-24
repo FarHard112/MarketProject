@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace MarketProject
 {
@@ -428,6 +427,11 @@ namespace MarketProject
         }
 
         public void MeblegeSatish()
+        {
+            throw new NotImplementedException();
+        }
+
+        public void SatishQaytar()
         {
             throw new NotImplementedException();
         }

@@ -1,6 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Text;
+
 
 namespace MarketProject
 {
@@ -59,8 +58,20 @@ namespace MarketProject
                 }
 
             }
-            
-            
+            //geriye donmek ucun
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Program.init(mehsul1);
+
         }
 
         public int QiymetAraligaGoreMehsulQaytarishi()
@@ -77,21 +88,13 @@ namespace MarketProject
                 if (n == item.kod)
                 {
  
-                    Console.WriteLine("Elave olunan mehsul :" +"\n" +
-                        "AD : " + item.ad + "\n" +
-                                     "Qiymet :" + item.qiymet + "\n" +
-                                      "Say :" + item.say + "\n" +
-                                      "Kod :" + item.kod + "\n" +
-                                      "Kateqoriya :" + item.kateqoriya + "\n"
-                                   );;
- 
-
                     Console.WriteLine("***Mehsul \n " +
                                      "AD : " + item.ad + "\n" +
                                      "Qiymet :" + item.qiymet + "\n" +
                                      "Say :" + item.say + "\n" +
                                      "Kod :" + item.kod + "\n" +
-                                     "Kateqoriya :" + item.kateqoriya + "\n"
+                                     "Kateqoriya :" + item.kateqoriya + "\n" +
+                                     "Tarix : "+item.saat+":"+item.deqiqe+"\n"
                                     );
                     Console.Write("Tarixi daxil edin\nSaat:");
                     int saat;
@@ -179,6 +182,118 @@ namespace MarketProject
 
         public void TarixeGoreAraligSatish()
         {
+            Console.Clear();
+            Console.WriteLine("Bashlangic tarix:");
+            Console.Write("Saat:");
+            int bsaat;
+            bsaat = int.Parse(Console.ReadLine());
+            while (bsaat > 24)
+            {
+                Console.Write("Tarixi dogru daxil edin\nSaat:");
+                bsaat = int.Parse(Console.ReadLine());
+            }
+            Console.Write(bsaat + ":");
+
+            int bdeqiqe;
+            bdeqiqe = int.Parse(Console.ReadLine());
+
+            while (bdeqiqe > 60)
+            {
+                Console.Write("Tarixi dogru daxil edin\nDeqiqe:");
+                bdeqiqe = int.Parse(Console.ReadLine());
+            }
+
+
+
+            Console.WriteLine("Son tarix:");
+            Console.Write("Saat:");
+            int ssaat;
+            ssaat = int.Parse(Console.ReadLine());
+            while (ssaat > 24)
+            {
+                Console.Write("Tarixi dogru daxil edin\nSaat:");
+                ssaat = int.Parse(Console.ReadLine());
+            }
+            Console.Write(ssaat + ":");
+
+            int sdeqiqe;
+            sdeqiqe = int.Parse(Console.ReadLine());
+
+            while (sdeqiqe > 60)
+            {
+                Console.Write("Tarixi dogru daxil edin\nDeqiqe:");
+                sdeqiqe = int.Parse(Console.ReadLine());
+            }
+
+
+
+
+            foreach (var item in Database.satishes)
+            {
+                if (item.saat > bsaat&&item.saat < ssaat)
+                {
+                        Console.WriteLine("***Mehsul \n " +
+                                     "AD : " + item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                     "Say :" + item.say + "\n" +
+                                     "Kod :" + item.kod + "\n" +
+                                     "Kateqoriya :" + item.kateqoriya + "\n"
+                       );
+                }
+                else if (item.saat == bsaat && item.saat == ssaat)
+                {
+                    if (item.deqiqe > bdeqiqe && item.deqiqe < sdeqiqe)
+                    {
+                        Console.WriteLine("***Mehsul \n " +
+                                     "AD : " + item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                     "Say :" + item.say + "\n" +
+                                     "Kod :" + item.kod + "\n" +
+                                     "Kateqoriya :" + item.kateqoriya + "\n"
+                       );
+                    }
+                }
+                else if (item.saat == bsaat && item.saat < ssaat)
+                {
+                    if (item.deqiqe > bdeqiqe)
+                    {
+                        Console.WriteLine("***Mehsul \n " +
+                                     "AD : " + item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                     "Say :" + item.say + "\n" +
+                                     "Kod :" + item.kod + "\n" +
+                                     "Kateqoriya :" + item.kateqoriya + "\n"
+                       );
+                    }
+                }
+                else if (item.saat > bsaat && item.saat == ssaat)
+                {
+                    if (item.deqiqe < sdeqiqe)
+                    {
+                        Console.WriteLine("***Mehsul \n " +
+                                     "AD : " + item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                     "Say :" + item.say + "\n" +
+                                     "Kod :" + item.kod + "\n" +
+                                     "Kateqoriya :" + item.kateqoriya + "\n"
+                       );
+                    }
+                }
+            }
+            //geriye donmek ucun
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Program.init(mehsul1);
+
         }
 
         public void TarixeGoreDateSatish()
@@ -335,6 +450,49 @@ namespace MarketProject
         int IMarketable.NomreyrEsasenSatishQaytarmaq()
         {
             throw new NotImplementedException();
+        }
+
+        public void SatishQaytar()
+        {
+
+            Console.WriteLine("Kodu daxil edin");
+            int i = int.Parse(Console.ReadLine());
+
+            foreach (var item in Database.satishes)
+            {
+                if ( i == item.kod)
+                {
+
+                    Console.WriteLine("***Mehsul \n " +
+                                     "AD : " + item.ad + "\n" +
+                                     "Qiymet :" + item.qiymet + "\n" +
+                                     "Say :" + item.say + "\n" +
+                                     "Kod :" + item.kod + "\n" +
+                                     "Kateqoriya :" + item.kateqoriya + "\n" +
+                                     "Tarix : " + item.saat + ":" + item.deqiqe + "\n"
+                                    );
+                    Database.mehsuls.Add(item);
+                    Database.satishes.Remove(item);
+                    break;
+
+                }
+            }
+            Console.WriteLine("SIKTIRDI");
+
+            //geriye donmek ucun
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            int mehsul1 = Convert.ToInt32(Console.ReadLine());
+            Console.Clear();
+
+
+            Console.WriteLine("1:Mehsul uzerind emeliyyat");
+            Console.WriteLine("2:Satish uzerinde emelliyyat");
+            Console.WriteLine("3:Cixis");
+            Console.WriteLine("^^^^^^^^^^^^^^^^^^^^^^^^^");
+            Program.init(mehsul1);
+
         }
     }
 }
