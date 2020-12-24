@@ -398,7 +398,7 @@ namespace MarketProject
 
         public void SatishELave(int n)
         {
-            Console.WriteLine(n);
+            
         }
 
         public void SatishReturn()
