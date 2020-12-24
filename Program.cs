@@ -35,7 +35,7 @@ namespace MarketProject
                 Console.WriteLine("1.Yeni mehsul elave et  ");
                 Console.WriteLine("2.Mehsul uzerinde duzelis et   ");
                 Console.WriteLine("3.Mehsulu sil -   ");
-                Console.WriteLine(" 4.Butun mehsullari goster   ");
+                Console.WriteLine("4.Butun mehsullari goster   ");
                 Console.WriteLine("5.Categoriyasina gore mehsullari goster  ");
                 Console.WriteLine("6.Qiymet araligina gore mehsullari goster  ");
                 Console.WriteLine("7.Mehsullar arasinda ada gore axtaris et  ");
@@ -48,7 +48,7 @@ namespace MarketProject
                 }
                 else if (mehsuldaxili == 2)
                 {
-                    Console.Write(" Duzelis etmek istediyiniz mehsulun:|| Kodu daxil edin :");
+                    Console.Write(" Duzelis etmek istediyiniz mehsulun Kodunu daxil edin :");
                     int code = int.Parse(Console.ReadLine());
                     for (int i = 0; i < Database.mehsuls.Count; i++)
                     {
@@ -180,11 +180,13 @@ namespace MarketProject
                 }
                 else if (mehsuldaxili == 6)
                 {
-
+                    Mehsul mehsul = new Mehsul();
+                    mehsul.MeblegAraliginaGoreMehsulQaytarilmasi();
                 }
                 else if (mehsuldaxili == 7)
                 {
-
+                    Mehsul mehsul = new Mehsul();
+                    mehsul.AdaEsasenSearch();
                 }
                 else
                 {

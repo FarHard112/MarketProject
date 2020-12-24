@@ -17,7 +17,7 @@ namespace MarketProject
         public int UpdateMeshul();
         public int KateqoriyaGoreQaytarish();
         public int QiymetAraligaGoreMehsulQaytarishi();
-        public int AdaEsasenSearch();
+        public void AdaEsasenSearch();
 
         
     }

@@ -8,7 +8,7 @@ namespace MarketProject
     {
        
 
-        public int AdaEsasenSearch()
+        public void AdaEsasenSearch()
         {
             throw new NotImplementedException();
         }
